@@ -4,10 +4,11 @@ export const reducer = (state, action) => {
             return {...state, data:"", loading:true, error:""};
         case "FETCH_SUCCESS":
             return {...state, data:action.payload, loading:false, error:""};
-        case "FETCH_FAİL":
+        case "FETCH_FAIL":
             return {...state, data:"", loading:false, error:action.payload};
             // return {...state, data:"", loading:false, error:"something went wrong!"}
         default:
                 return state ;
     }
-}
+};
+
